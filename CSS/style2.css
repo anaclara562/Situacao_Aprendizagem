@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&family=Zen+Dots&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient( to right,
+    rgba(255,92,181,0.4) 0%,
+    rgba(166,77,255,0.4) 50%,
+    rgba(255,92,181,0.4) 100%
+    );
+}
+
+h1 {
+    font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient( to right,
+    rgba(255,0,126,1) 0%,
+    rgba(134,0,255,1) 100%
+    );
+}
+
+.nav-bar {
+    display: flex;
+    position: relative;
+    gap: 110px;
+    background-color: #ffffff;
+    
+}
+
+.nav-bar svg {
+    fill: currentColor;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.orcamento {
+    border-bottom: 4px solid #8600FF;
+    color: #8600FF;
+}
+
+.orcamento a {
+    margin-top: -40px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    color: #8600FF;
+    text-decoration: none;
+}
+
+.lista_tarefas_svg {
+    margin-top: 10px;
+}
+
+.lista_tarefas {
+    margin-left: 120px;
+}
+
+.lista_tarefas a {
+    margin-left: 10px;
+    color: #6E6E6E;
+    text-decoration: none;
+}
+
+.lista_tarefas svg {
+    fill: #6E6E6E;
+}
+
+.lista_tarefas:hover {
+    border-bottom: 4px solid #FBCFE8;
+}
+.lista_tarefas:hover a{
+    color: #EC4899;
+}
+.lista_tarefas:hover .lista_tarefas_svg {
+    fill: #EC4899;
+}
+
+form {
+    margin-top: 60px;
+    width: 1124px;
+    height: 210px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    align-items: center;
+    margin-left: 195px;
+}
+
+.titulo_forms {
+    display: flex;
+    gap: 10px;
+    margin-left: 65px;
+    margin-top: 15px;
+}
+
+.titulo_forms h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: #FF007E;
+}
+
+.titulo_forms svg {
+    margin-top: 19px;
+}
+
+form label {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    color: #790ADE;
+    font-size: 14px;
+    margin-left: 65px;
+    font-weight: 600;
+}
+
+form input {
+    width: 986px;
+    height: 30px;
+    border: 3px solid rgba(253,109,191,0.8);
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-left: 63px;
+}
+
+form p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    color: #A64DFF;
+    margin-top: -13px;
+    margin-left: 65px;
+}
+
+input:focus {
+    outline: none;
+    border: 4px solid rgba(255, 44, 164, 0.8);
+    font-size: 16px;
+}
+
+.cards {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 195px;
+    gap: 77px;
+}
+
+.card_tarefas {
+    width: 317px;
+    height: 150px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    align-items: center;
+}
+
+.icone_lista {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 15px;
+    background-color: #FFD5ED;
+}
+
+.titulo_card1 {
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #790ADE;
+    font-weight: 600;
+}
+
+.titulo_card1 h2 {
+    margin-top: 25px;
+}
+
+.card_tarefas span {
+    font-size: 32px;
+    margin-left: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #FF007E;
+}
+
+.card_horas {
+    width: 317px;
+    height: 150px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    align-items: center;
+}
+
+.icone_horas {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 15px;
+    background-color: #E4D5FF;
+}
+
+.titulo_card2 {
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #790ADE;
+    font-weight: 600;
+}
+
+.titulo_card2 h2 {
+    margin-top: 25px;
+}
+
+.card_horas span {
+    font-size: 32px;
+    margin-left: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #FF007E;
+}
+
+.card_custos {
+    width: 317px;
+    height: 150px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    align-items: center;
+}
+
+.icone_custo {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 15px;
+    background-color: #FFD5ED;
+}
+
+.titulo_card3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: #790ADE;
+    font-weight: 600;
+}
+
+.titulo_card3 h2 {
+    margin-top: 25px;
+}
+
+.card_custos span {
+    font-size: 32px;
+    margin-left: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #FF007E;
+}
+
+.nivel_urgencia {
+    margin-top: 60px;
+    width: 1124px;
+    height: 180px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    align-items: center;
+    margin-left: 195px;
+}
+
+.titulo_urgencia {
+    display: flex;
+    gap: 10px;
+    margin-left: 65px;
+    margin-top: 30px;
+}
+
+.titulo_urgencia label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: #FF007E;
+}
+
+.titulo_urgencia svg {
+    margin-top: 2px;
+}
+
+.nivel_urgencia select {
+    width: 986px;
+    height: 40px;
+    border: 3px solid rgba(253,109,191,0.8);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 63px;
+    margin-top: 6px;
+    font-family: "Poppins", sans-serif;
+    color: #8600FF;
+    font-weight: 500;
+}
+
+.nivel_urgencia p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    color: #A64DFF;
+    margin-top: -5px;
+    margin-left: 65px;
+}
+
+.nivel_urgencia select:focus {
+    outline: none;
+    border: 4px solid rgba(255, 44, 164, 0.8);
+    font-size: 16px;
+}
+
+option {
+    font-family: "Poppins", sans-serif;
+    color: #FF007E;
+    font-weight: 500;
+}
+
+.list {
+    position: relative;
+    margin-top: 60px;
+    width: 1124px;
+    height: 380px;
+    background-color: rgb(255,255,255,0.8);
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    margin-left: 195px;
+}
+
+.titulo_lista_menor {
+    display: flex;
+    gap: 10px;
+    margin-left: 65px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.titulo_lista_menor h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: #FF007E;
+}
+
+.titulo_lista_menor svg {
+    margin-top: 19px;
+}
+
+.titulo_lista {
+    width: 1124px;
+    height: 100px;
+    border-radius: 20px;
+    border: 5px solid rgba(253,109,191,0.8);
+    margin-left: -5px;
+    margin-top: -5px;
+    background-color: rgba(255, 213, 237, 1);
+}
+
+.titulo_lista p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    color: #790ADE;
+    margin-top: -13px;
+    margin-left: 70px;
+}
+
+.dinheiro {
+    margin-top: 50px;
+    margin-left: 505px;
+    text-align: center;
+}
+
+.info {
+    color: #A64DFF;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(202, 56, 210, 0.8);
+    font-family:  "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
