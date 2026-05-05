@@ -27,22 +27,26 @@ header {
 }
 
 .nav-bar {
+    justify-content: center;
     display: flex;
-    position: relative;
-    gap: 110px;
-    background-color: #ffffff;
-    
+    align-items: center;
+    gap: 40px;
+    background: #ffffff;
 }
 
 .nav-bar svg {
     fill: currentColor;
 }
 
-a {
+.nav-bar a {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-style: normal;
-    font-size: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
 }
 
 .material-symbols-outlined {
@@ -53,45 +57,53 @@ a {
   'opsz' 24
 }
 
-.orcamento {
-    border-bottom: 4px solid #8600FF;
-    color: #8600FF;
-}
-
-.orcamento a {
-    margin-top: -40px;
-    padding-bottom: 10px;
-    margin-left: 10px;
-    color: #8600FF;
-    text-decoration: none;
-}
-
-.lista_tarefas_svg {
-    margin-top: 10px;
-}
-
 .lista_tarefas {
-    margin-left: 120px;
+    position: relative;
+    display: flex;
+    border-bottom: 4px solid #ffffff;
 }
 
 .lista_tarefas a {
+    margin-top: 5px;
     margin-left: 10px;
     color: #6E6E6E;
     text-decoration: none;
 }
 
 .lista_tarefas svg {
+    margin-top: 15px;
+    padding-bottom: 10px;
     fill: #6E6E6E;
 }
 
 .lista_tarefas:hover {
     border-bottom: 4px solid #FBCFE8;
 }
-.lista_tarefas:hover a{
+.lista_tarefas:hover a {
     color: #EC4899;
 }
 .lista_tarefas:hover .lista_tarefas_svg {
     fill: #EC4899;
+}
+
+.orcamento {
+    padding-right: 10px;
+    position: relative;
+    display: flex;
+    border-bottom: 4px solid #8600FF;
+    color: #8600FF;
+}
+
+.orcamento a {
+    margin-top: 5px;
+    margin-left: 3px;
+    color: #8600FF;
+    text-decoration: none;
+}
+
+.orcamento svg {
+    margin-top: 15px;
+    padding-bottom: 10px;
 }
 
 form {

@@ -52,7 +52,7 @@
         <input type="number" id="horas">
         <br>
         <br>
-        <button type="button" onclick="adicionarTarefa()">
+        <button type="button" class="adicionar_button" onclick="tarefaController.adicionarTarefa()">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.85714 8.77938H0V6.58453H6.85714V0H9.14286V6.58453H16V8.77938H9.14286V15.3639H6.85714V8.77938Z" fill="white"/>
             </svg>
@@ -69,24 +69,32 @@
                 </svg>
                 <h2>Tarefas Existentes</h2>
             </div>
-            <p>0 tarefas adicionadas</p>
+            <p id="contador">0 tarefas adicionadas</p>
         </div>
-        <svg class="lista2" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="55" cy="55" r="55" fill="url(#paint0_linear_27_100)"/>
-            <path d="M31 85.6667C29.1666 85.6667 27.5972 85.0139 26.2916 83.7083C24.9861 82.4028 24.3333 80.8333 24.3333 79V32.3333C24.3333 30.5 24.9861 28.9306 26.2916 27.625C27.5972 26.3194 29.1666 25.6667 31 25.6667H45C45.7222 23.6667 46.9305 22.0556 48.625 20.8333C50.3194 19.6111 52.2222 19 54.3333 19C56.4444 19 58.3472 19.6111 60.0416 20.8333C61.7361 22.0556 62.9444 23.6667 63.6666 25.6667H77.6666C79.5 25.6667 81.0694 26.3194 82.375 27.625C83.6805 28.9306 84.3333 30.5 84.3333 32.3333V79C84.3333 80.8333 83.6805 82.4028 82.375 83.7083C81.0694 85.0139 79.5 85.6667 77.6666 85.6667H31ZM31 79H77.6666V32.3333H31V79ZM37.6666 72.3333H61V65.6667H37.6666V72.3333ZM37.6666 59H71V52.3333H37.6666V59ZM37.6666 45.6667H71V39H37.6666V45.6667ZM56.125 29.125C56.5972 28.6528 56.8333 28.0556 56.8333 27.3333C56.8333 26.6111 56.5972 26.0139 56.125 25.5417C55.6528 25.0694 55.0555 24.8333 54.3333 24.8333C53.6111 24.8333 53.0139 25.0694 52.5416 25.5417C52.0694 26.0139 51.8333 26.6111 51.8333 27.3333C51.8333 28.0556 52.0694 28.6528 52.5416 29.125C53.0139 29.5972 53.6111 29.8333 54.3333 29.8333C55.0555 29.8333 55.6528 29.5972 56.125 29.125Z" fill="#8600FF"/>
-            <defs>
-                <linearGradient id="paint0_linear_27_100" x1="0" y1="55" x2="110" y2="55" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#FFD5ED"/>
-                    <stop offset="1" stop-color="#D5ACFF"/>
-                </linearGradient>
-            </defs>
-        </svg>
-        <p class="info">Nenhuma tarefa adicionada ainda.<br>Adicione tarefas usando o formulário acima ✨</p>
+        <div id="conteudo_lista">
+            <div class="empty-state" id="empty">
+                <svg class="lista2" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="55" cy="55" r="55" fill="url(#paint0_linear_27_100)"/>
+                    <path d="M31 85.6667C29.1666 85.6667 27.5972 85.0139 26.2916 83.7083C24.9861 82.4028 24.3333 80.8333 24.3333 79V32.3333C24.3333 30.5 24.9861 28.9306 26.2916 27.625C27.5972 26.3194 29.1666 25.6667 31 25.6667H45C45.7222 23.6667 46.9305 22.0556 48.625 20.8333C50.3194 19.6111 52.2222 19 54.3333 19C56.4444 19 58.3472 19.6111 60.0416 20.8333C61.7361 22.0556 62.9444 23.6667 63.6666 25.6667H77.6666C79.5 25.6667 81.0694 26.3194 82.375 27.625C83.6805 28.9306 84.3333 30.5 84.3333 32.3333V79C84.3333 80.8333 83.6805 82.4028 82.375 83.7083C81.0694 85.0139 79.5 85.6667 77.6666 85.6667H31ZM31 79H77.6666V32.3333H31V79ZM37.6666 72.3333H61V65.6667H37.6666V72.3333ZM37.6666 59H71V52.3333H37.6666V59ZM37.6666 45.6667H71V39H37.6666V45.6667ZM56.125 29.125C56.5972 28.6528 56.8333 28.0556 56.8333 27.3333C56.8333 26.6111 56.5972 26.0139 56.125 25.5417C55.6528 25.0694 55.0555 24.8333 54.3333 24.8333C53.6111 24.8333 53.0139 25.0694 52.5416 25.5417C52.0694 26.0139 51.8333 26.6111 51.8333 27.3333C51.8333 28.0556 52.0694 28.6528 52.5416 29.125C53.0139 29.5972 53.6111 29.8333 54.3333 29.8333C55.0555 29.8333 55.6528 29.5972 56.125 29.125Z" fill="#8600FF"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_27_100" x1="0" y1="55" x2="110" y2="55" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FFD5ED"/>
+                            <stop offset="1" stop-color="#D5ACFF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <p class="info">Nenhuma tarefa adicionada ainda.<br>Adicione tarefas usando o formulário acima ✨</p>
+            </div>
+            <ul id="listaTarefas"></ul>
+        </div>
     </div>
 
     
     <footer>
         <p>Gerenciador de Tarefas<br>© 2026 - Ana Clara Rodrigues</p>
     </footer>
+    <script src="/SCRIPTS/controllers/tarefaController.js"></script>
+    <script src="/SCRIPTS/Repositories/tarefaRepository.js"></script>
+    <script src="/SCRIPTS/Services/tarefaService.js"></script>
 </body>
 </html>
